@@ -1,38 +1,432 @@
-.App {
-  text-align: center;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.feature-header-ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.feature-header-ul img {
+  height: 19px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrpper-container {
+  max-width: 1123px;
+  margin: auto;
+  width: 90%;
+}
+
+.hero-banner {
+  position: relative;
+  margin-top: 65px;
+}
+
+.hero-banner img {
+  width: 100%;
+  object-fit: fill;
+}
+
+.header {
+  position: fixed;
+  background-color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  z-index: 1200;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.16);;
+}
+
+ 
+a.brand.Playfair {
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text);
+}
+.humburger {
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.humburger-span {
+    position: absolute;
+    height: 3px;
+    background: var(--brown);
+    transition: .3s all;
+}
+
+.humburger-span-1 {
+    width: 16px;
+    right: 2px;
+    top: 0;
+    cursor: pointer;
+}
+ 
+.active-button.humburger .humburger-span-3, .active-button.humburger .humburger-span-1 {
+    width: 100%;
+    top: 50%;
+}
+
+.active-button.humburger .humburger-span-1 {
+  left: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.active-button.humburger .humburger-span-3 {
+  transform: translateY(-50%) rotate(-45deg);
+  left: 0;
+}
+
+.active-button.humburger .humburger-span-2 {
+    opacity: 0;
+    right: -100%;
+}
+
+.humburger-span-3 {
+    width: 16px;
+    left: 2px;
+    bottom: 0;
+}
+
+.humburger-span-2 {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+ 
+/* category page css */
+.cotegory-card {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.category-img img {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.cat-title {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.cotegory-row.row {
+  display: flex;
+  justify-content: space-around;
+  padding: 68px 0;
+}
+
+.category-img {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.cotegory-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 22px;
+}
+
+.cat-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+}
+.MS {
+  background: #F1DBE9;
+}
+.WW {
+  background: #DDD3EB;
+}
+
+.WC {
+  background: #D3EAEB;
+}
+
+.HTS {
+  background: #EFF1D9;
+}
+
+.PNTC {
+  background: #F1DADB;
+}
+
+.FSTS {
+  background: #D9F1DE;
+}
+
+/* category page css */
+
+
+/* offer 1 css */
+section.offer1-section {
+  padding: 68px 0;
+}
+.offer1-row.row {
+  display: grid;
+  grid-template-areas:
+      'img1 img1 img1 img2 img2 img2'
+      'img3 img3 img4 img4 img5 img5 ';
+  gap: 20px;
+}
+
+.image1 {grid-area: img1;}
+
+.image2 {
+  grid-area: img2;
+}
+
+.image3 {
+  grid-area: img3;
+}
+
+.image4 {
+  grid-area: img4;
+}
+
+.image5 {
+  grid-area: img5;
+}
+
+.offer1-image img {
+  width: 100%;
+}
+
+/* offer 1 css end */
+
+
+/* trending tshirt css */
+.heading-box {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 19px;
+  margin-bottom: 65px;
 }
 
-.App-link {
-  color: #61dafb;
+.heading-box h3 {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divider {
+  position: relative;
+  width: 35%;
+  height: 2px;
+  background: #f5f5f5;
 }
+.featured-divider{
+  width: 34%;
+}
+.Trending-image {
+  position: relative;
+  height: 413px;
+  width: 264px;
+  overflow: hidden;
+}
+.viwe-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-all-btn {
+  height: 48px;
+  background: var(--brown);
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 170px;
+  line-height: 48px;
+  margin-top: 48px;
+  transition: .3s all;
+  border: 1px solid transparent;
+}
+
+.view-all-btn:hover {
+  color: var(--brown);
+  border: 1px solid var(--brown);
+  background: transparent;
+}
+.Trending-image img {
+  height: 100%;
+  width: 100%;
+  transition: .3s all;
+}
+
+.Trending-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: .3s ease;
+}
+.Trending-card {
+  text-align: center;
+  flex: 1 0 264px;
+  transition: .3s all;
+  max-width: 264px;
+}
+.trending-img{
+  transition: .3s all;
+}
+.Trending-card:hover .trending-img{
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.Trending-overlay a {
+  height: 54px;
+  width: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  opacity: 0;
+  left: -6px;
+  transition: .3s ease;
+
+}
+.Trending-card:hover a {
+  opacity: 1;
+  left: 0;
+}
+.Trending-overlay a img {
+  height: 25px;
+  width: 25px;
+}
+
+.size-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 14px;
+  gap: 14px;
+}
+
+.size-list li {
+  height: 36px;
+  width: 36px;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 36px;
+}
+.trending-card-content-title {
+    font-size: 14px;
+    max-width: 56%;
+    margin: auto;
+}
+.Trending-row.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px 22px;
+}
+.card-prize s {
+    color: #F00;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.card-prize strong {
+    font-size: 18px;
+}
+
+.card-prize {
+    margin: 10px 0;
+}
+
+.trending-card-content {
+    padding: 10px 0;
+}
+/* trending tshirt css end */
+
+/* addbanner 1 css */
+
+section.add-banner-section {
+  background: #e1ab7f;
+  position: relative;
+  min-height: 526px;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.add-image {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.add-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 640px;
+  position: relative;
+}
+
+.add-banner-section .wrpper-container {
+  height: 487px;
+}
+
+.rectengle1 {
+  position: relative;
+  z-index: 2;
+  height: 60px;
+  width: 50px;
+  background: #cf8246c7;
+}
+
+.rectengle2 {
+  height: 140px;
+  width: 140px;
+  background: #edc9ab;
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+
+.content-add {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 85%;
+}
+
+.content-add p.Script {
+  font-size: 53px;
+}
+
+.brab-btn {
+  display: inline-block;
+  padding: 7px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background: #a64d12;
+  border-radius: 12px;
+  font-size: 14px;
+}
+/* addbanner 1 css end */

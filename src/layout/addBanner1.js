@@ -7,6 +7,7 @@ const AddBanner1 = () => {
 
   useEffect(() => {
     // Animation for Add Content Title
+    
     gsap.fromTo(
       '.add-content-title',
       { opacity: 0, y: '-10px' },

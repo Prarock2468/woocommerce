@@ -53,13 +53,13 @@ const AddBanner1 = () => {
 
     // Animation for Add Image
     gsap.fromTo(
-      '.add-img',
-      { height: 0 },
+      '.add-image',
+      { clipPath: 'inset(0, 0, 0, 100%)' },
       {
-        height: '500px',
+        clipPath: 'inset(0 0 0 0)',
         duration: 1,
         scrollTrigger: {
-          trigger: '.add-img',
+          trigger: '.add-image',
           start: 'top 80%',
         },
       }

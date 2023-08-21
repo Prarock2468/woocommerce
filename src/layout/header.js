@@ -1,36 +1,16 @@
-import React, { useState,useEffect } from 'react'
-import gsap from 'gsap';
+import React, { useState} from 'react'
 const Header = () => {
   const [isActive, setIsActive] = useState(false);  
 
   const toggleClass = () => {
     setIsActive(prevState => !prevState); 
   };
-
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Use a conditional class based on the isActive state
   const buttonClass = isActive ? 'active-button' : 'inactive-button';
   return (
     <>
     
      <section className='hero-section'>
-            <header className={`header ${isScrolled ? 'fixed' : ''}`}>
+            <header className="header">
                  <div className='wrpper-container'>
                       <div className='header-wrapper'>
                           <nav>
@@ -68,7 +48,7 @@ const Header = () => {
             </header>
 
             <div className='hero-banner'>
-              <img src='/image/heroBanner.png' />
+              <img src='/image/heroBanner.png' loading="lazy" />
             </div>
      </section>
     

@@ -6,11 +6,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Collection = () => {
   useEffect(() => {
-    const collectionCards = document.querySelectorAll('.collection-card');
+    const categoryCards = document.querySelectorAll('.collection-card');
 
-    collectionCards.forEach((card) => {
-      const img = card.querySelector('img');
-      const text = card.querySelector('.collection-text');
+    categoryCards.forEach((card, index) => {
+      const img = card.querySelector('.collection-card img');
+      const title = card.querySelector('.collection-text');
 
       gsap.fromTo(
         card,
@@ -28,11 +28,11 @@ const Collection = () => {
 
       gsap.fromTo(
         img,
-        { opacity: 0, x: -50 },
+        { opacity: 0, y: '100%' },
         {
           opacity: 1,
-          x: 0,
-          duration: 1,
+          y: '0%',
+          duration: 0.7,
           scrollTrigger: {
             trigger: card,
             start: 'top 80%',
@@ -41,11 +41,12 @@ const Collection = () => {
       );
 
       gsap.fromTo(
-        text,
-        { opacity: 0 },
+        title,
+        { opacity: 0, y: '100%' },
         {
           opacity: 1,
-          duration: 1.5,
+          y: '0%',
+          duration: 0.5,
           scrollTrigger: {
             trigger: card,
             start: 'top 80%',
@@ -53,6 +54,21 @@ const Collection = () => {
         }
       );
     });
+    const addBannerImage = document.querySelector('.add-banner-1');
+
+    gsap.fromTo(
+      addBannerImage,
+      { scale: 1.2, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.collection-add-banner',
+          start: 'top 80%',
+        },
+      }
+    );
   }, []);
   return (
     <>

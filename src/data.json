@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "title": "Product 1",
+      "image": "image1.jpg",
+      "price": 29.99,
+      "mrp": 39.99,
+      "category": "Electronics",
+      "nature": "Gadget",
+      "bestSelling": true,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "image": "image2.jpg",
+      "price": 49.99,
+      "mrp": 59.99,
+      "category": "Clothing",
+      "nature": "Apparel",
+      "bestSelling": false,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Product 3",
+      "image": "image3.jpg",
+      "price": 12.99,
+      "mrp": 19.99,
+      "category": "Home",
+      "nature": "Decor",
+      "bestSelling": true,
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Product 4",
+      "image": "image4.jpg",
+      "price": 199.99,
+      "mrp": 249.99,
+      "category": "Electronics",
+      "nature": "Appliance",
+      "bestSelling": false,
+      "featured": false
+    }
+  ]
+  

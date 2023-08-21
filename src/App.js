@@ -18,9 +18,9 @@ function App() {
 
     <>
      <Header />
-     
+
       <ErrorBoundary>
-        <Suspense fallback={<div className='loader'>Loading...</div>}>
+        <Suspense fallback={<div className='loader-box'><div className='loader'>Loading...</div></div> }>
           <Category />
         </Suspense>
       </ErrorBoundary>

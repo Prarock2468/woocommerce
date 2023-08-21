@@ -30,7 +30,7 @@ const Category = () => {
 
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const triggerPoint = window.innerHeight * 0.2;
+      const triggerPoint = window.innerHeight * 0.0;
 
       if (scrollTop > triggerPoint) {
         timeline.play();

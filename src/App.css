@@ -518,7 +518,7 @@ section.add-banner-section {
 }
 
 section.collection-add-banner {
-  margin: 50px 0;
+  margin: 68px 0;
   overflow: hidden;
 }
 
@@ -727,7 +727,81 @@ input.form-control::placeholder {
 }
 
 /* subscribe section css end */
+/* footer css */
 
+.content-fText {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.footer-col-1 {
+  max-width: 360px;
+}
+
+ul.social-list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.footer-title {
+  font-size: 18px;
+  color: var(--brown);
+  line-height: 28px;
+  margin-bottom: 14px;
+}
+
+.footer-col-2 {
+  max-width: 170px;
+  width: 100%;
+}
+
+ul.footer-ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 35px;
+  transition: .3s all;
+}
+
+.footer-col-3 {
+  max-width: 205px;
+  width: 100%;
+}
+
+.address {
+  line-height: 28px !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.address-ul li:nth-child(1) .address img {
+  margin-top: 6px;
+}
+
+.address-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.row.footer-row {
+  gap: 30px;
+}
+section.footer {
+  padding: 60px 0;
+  margin-top: 68px;
+  border-top: 1px solid #ddd;
+}
+
+ul.footer-ul li a:hover {
+  color: var(--brown);
+}
+
+/* footer css */
 
 /* responsive css */
 
@@ -785,12 +859,18 @@ img.support-icon {
   height: 100% !important;
   width: 100%;
 }
+.footer-col-1 {
+  max-width: 280px;
+}
 }
 
 @media only screen and (max-width:1100px) {
   .category-img {
     height: 130px;
     width: 130px;
+  }
+  .address {
+    line-height: 21px !important;
   }
   .category-img img{
     height: 100%;
@@ -820,7 +900,19 @@ img.support-icon {
     width: 120px;
     margin: auto auto 26px auto;
   }
-   
+  .row.footer-row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-col-1 {
+    width: 100%;
+    max-width: 100%;
+}
+
+.footer-col.footer-col-4 {
+    max-width: 360px;
+}
   img.offer-icon {
     height: 100%;
     width: 100%;
@@ -935,11 +1027,26 @@ section.offer1-section {
 }
 }
 
+@media only screen and (max-width:837px) {
+  .footer-col.footer-col-4 {
+    max-width: 299px;
+}
+.row.footer-row {
+  gap: 30px 20px;
+}
+}
 @media only screen and (max-width:767px) {
   .subscribe-wrapper h4 {
     font-size: 27px;
     max-width: 499px;
   }
+  .footer-col {
+    flex: 1 0 264px;
+    max-width: 50%;
+}
+.row.footer-row {
+    justify-content: start;
+}
   form.subscribe-form {
     width: 401px;
   }
@@ -1025,6 +1132,9 @@ section.offer1-section {
 }
 form.subscribe-form {
   width: 300px;
+}
+.footer-col {
+  max-width: 100%;
 }
 .offer-Off {
   font-size: 36px;

@@ -49,7 +49,7 @@ const BestSellingProduct = () => {
 
 
   return (
-    <section className='Trending-section featured-section' style={{"padding":"65px 0"}}>
+    <section className='Trending-section featured-section' style={{"padding":"0px 0 65px"}}>
     <div className='wrpper-container'>
       <div className='heading-box'>
         <div className='divider featured-divider'></div>
